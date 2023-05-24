@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,42 +67,6 @@ Route::get('/luan5',[PageController::class,'if']);
 Route::get('/luan6',[PageController::class,'for']);
 
 Route::get('/luan7',[PageController::class,'lienhe']);
-
-Route::get('/luan8',[PageController::class,'about']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/tinhtich/{a}/{b}', function ($a,$b) {
-    echo $a*$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhtong/{a}/{b}', function ($a,$b) {
-    echo $a+$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhhieu/{a}/{b}', function ($a,$b) {
-    echo $a-$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-Route::get('/tinhthuong/{a}/{b}', function ($a,$b) {
-    echo $a/$b;exit;
-    
-})->whereNumber('a')->whereNumber('b');
-
 
 
 
