@@ -40,5 +40,15 @@ class UserController extends Controller
         $e4= $request->input('e4');
         return view('areaOfShape')->with(['areaTriangle'=>($a+$b)/2,'areaQuadrangle'=>($e1+$e2+$e3+$e4)]);
     }
+    public function getData()
+    {
+        $client = new Client();
+        $response = $client->request('GET', 'http://localhost:8000/api-data');
+        $data = json_decode($response->getBody(), true);
+
+        return view('api-data', ['data' => $data]);
+    }
+
+    
 
 }

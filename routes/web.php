@@ -68,9 +68,7 @@ Route::get('/luan6',[PageController::class,'for']);
 
 Route::get('/luan7',[PageController::class,'lienhe']);
 
-
-
-
+Route::get('/luan8',[PageController::class,'about']);
 
 
 
