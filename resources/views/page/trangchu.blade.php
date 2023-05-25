@@ -1,5 +1,5 @@
 @extends('master')
-@section_start('content')
+@section('content')
 <div class="fullwidthbanner-container">
 					<div class="fullwidthbanner">
 						<div class="bannercontainer" >
@@ -306,5 +306,5 @@
 			</div> <!-- .main-content -->
 		</div> <!-- #content -->
 	</div> <!-- .container -->
-@endsection_start
+@endsection
 

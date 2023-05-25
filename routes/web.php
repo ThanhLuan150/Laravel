@@ -50,8 +50,9 @@ Route::get('/signup',[SignupController::class ,'index']);
 Route::post('/signup',[SignupController::class ,'displayInfor']);
 
 
-Route::get('add', [AddRoomController::class, 'index']);
-Route::post('add', [AddRoomController::class, 'store'])->name('add.store');
+// addRooms
+Route::get('/addrooms', [addRoomsController::class, 'index']);
+Route::post('/addrooms', [addRoomsController::class, 'showrooms']);
 
 Route::get('/luan',[PageController::class,'getIndex']);
 
