@@ -72,7 +72,7 @@ Route::get('/luan7',[PageController::class,'lienhe']);
 Route::get('/luan8',[PageController::class,'about']);
 
 
-
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 
 
