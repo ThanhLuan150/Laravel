@@ -55,10 +55,11 @@ Route::get('/addrooms', [addRoomsController::class, 'index']);
 Route::post('/addrooms', [addRoomsController::class, 'showrooms']);
 
 Route::get('/luan',[PageController::class,'getIndex']);
+Route::get('/luan6',[PageController::class,'slide']);
 
 Route::get('/luan1',[PageController::class,'getLoaiSP']);
 
-Route::get('/luan2',[PageController::class,'getChitiet']);
+Route::get('/luan2/{id}',[PageController::class,'getDetail']);
 
 Route::get('/luan4',[PageController::class,'marter']);
 
