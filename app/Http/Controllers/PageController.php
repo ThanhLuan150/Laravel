@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\comments;
 use App\Models\products;
-use App\Models\slide;
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -35,7 +35,7 @@ class PageController extends Controller
 //     return view('page.about');			
 //     }      
     public function getIndex(){							
-    	// $slide =slide::all();						
+        // $slide =Slide::all();						
     	//return view('page.trangchu',['slide'=>$slide]);						
         $new_product = products::where('new',1)->paginate(8);
         $sanpham_khuyenmai = products::where('promotion_price','<>',0)->paginate(4);						
