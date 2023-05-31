@@ -35,12 +35,12 @@ class PageController extends Controller
 //     return view('page.about');			
 //     }      
     public function getIndex(){							
-        // $slide =Slide::all();						
+        $slide =Slide::all();						
     	//return view('page.trangchu',['slide'=>$slide]);						
         $new_product = products::where('new',1)->paginate(8);
         $sanpham_khuyenmai = products::where('promotion_price','<>',0)->paginate(4);						
         //dd($new_product);							
-    	return view('page.trangchu',compact('new_product','sanpham_khuyenmai'));						
+    	return view('page.trangchu',compact('slide','new_product','sanpham_khuyenmai'));						
     }							
     						
     public function getDetail(Request $request){							
