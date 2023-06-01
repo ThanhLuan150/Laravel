@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\comments;
 use App\Models\products;
-use App\Models\Slide;
+use App\Models\slide;
+use App\Models\slides;
+use App\Models\type_products;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -35,12 +37,12 @@ class PageController extends Controller
 //     return view('page.about');			
 //     }      
     public function getIndex(){							
-        $slide =Slide::all();						
+        $slides =slides::all();						
     	//return view('page.trangchu',['slide'=>$slide]);						
         $new_product = products::where('new',1)->paginate(8);
         $sanpham_khuyenmai = products::where('promotion_price','<>',0)->paginate(4);						
         //dd($new_product);							
-    	return view('page.trangchu',compact('slide','new_product','sanpham_khuyenmai'));						
+    	return view('page.trangchu',compact('slides','new_product','sanpham_khuyenmai'));						
     }							
     						
     public function getDetail(Request $request){							
@@ -48,6 +50,14 @@ class PageController extends Controller
         $splienquan = products::where('id','<>',$sanpham->id,'and','id_type','=',$sanpham->id_type)->paginate(3);						
         $comments =	comments::where('id_product',$request->id)->get();					
     	return view('page.chitiet_sanpham',compact('sanpham','splienquan','comments'));						
-    }		  
+    }	
+    public function getLoaiSp($type){			
+        	$type_product =type_products::all();//Show ra tên loại sản phẩm
+            $sp_theoloai = products::where('id_type',$type)->get();
+            $sp_khac =products::where('id_type','<>',$type)->paginate(3);
+            return view('page.loai_sanpham',compact('sp_theoloai','type_product','sp_khac'));
+
+
+ }	  
     
 }

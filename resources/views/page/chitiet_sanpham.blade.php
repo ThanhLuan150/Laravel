@@ -1,9 +1,6 @@
-																		
-		@extends('master')																
-		@section('content')																
-																		
-		</html>																
-		<div class="inner-header">																
+@extends('master')																
+@section('content')																
+<div class="inner-header">																
 		  <div class="container">																
 		    <div class="pull-left">																
 		      <h6 class="inner-title">San Pham {{$sanpham->name}}</h6>																
@@ -16,13 +13,11 @@
 		    <div class="clearfix"></div>																
 		  </div>																
 		</div>																
-																		
 		<div class="container">																
 		  <div id="content">																
 		    <div class="row">																
 		      <div class="col-sm-9">																
-																		
-		        <div class="row">																
+				<div class="row">																
 		          <div class="col-sm-4">																
 		            <img src="/source/image/product/{{$sanpham->image}}" alt="">																
 		          </div>																
@@ -74,15 +69,17 @@
 		            <li><a href="#tab-comment">Comments</a></li>																
 		          </ul>																
 																		
-		          <div class="panel" id="tab-description">																
-		            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni																
-		              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor																
-		              sit amet.</p>																
-		            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam																
-		              aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit																
-		              laboriosam, nisi ut aliquid ex ea commodi consequaturuis autem vel eum iure reprehenderit qui in ea																
-		              voluptate velit es quam nihil molestiae consequr, vel illum qui dolorem eum fugiat quo voluptas nulla																
-		              pariatur? </p>																
+		          <div class="panel" id="tab-description">
+				<center>
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni																
+		           dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor																
+		           sit amet.Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam																
+		           aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit																
+		           laboriosam, nisi ut aliquid ex ea commodi consequaturuis autem vel eum iure reprehenderit qui in ea																
+		           voluptate velit es quam nihil molestiae consequr, vel illum qui dolorem eum fugiat quo voluptas nulla																
+		           pariatur? </p>
+				</center>																
+		            																
 		          </div>																
 		          <div class="panel" id="tab-comment">																
 																		

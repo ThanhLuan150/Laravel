@@ -1,27 +1,25 @@
 @extends('master')
 @section('content')
 <div class="fullwidthbanner-container">
-					<div class="fullwidthbanner">
-						<div class="bannercontainer" >
-					    <div class="banner" >
-								<ul>
-								@foreach($slide as $sl)
+        <div class="fullwidthbanner">
+            <div class="bannercontainer">
+                <div class="banner">
+                    <ul>
+                        <!-- THE FIRST SLIDE -->
+						@foreach($slides as $sl)
                         <li data-transition="boxfade" data-slotamount="20" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden;
                         z-index: 18; visibility: hidden; opacity: 0;">
                         <div class="slotholder" style="width: 100%; height: 100%;" data-duration="undifined" data-zoomstart="undifined" data-zoomend="undifined"
                         data-bgposition="undifined" data-kenburns="undifined" data-easeme="undifined" data-bgfit="undifined" data-bgfitend="undifined" ></div>
                         </li>   
                             <img src="/source/image/slide/{{$sl->image}}" alt="It'ok">
-                        	@endforeach
-								</ul>
-							</div>
-						</div>
+                        @endforeach
 
-						<div class="tp-bannertimer"></div>
-					</div>
-				</div>
-				<!--slider-->
-	</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 	<div class="container">
 		<div id="content" class="space-top-none">
 			<div class="main-content">

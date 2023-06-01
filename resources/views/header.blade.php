@@ -90,7 +90,7 @@
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="index.html">Trang chủ</a></li>
+						<li><a href="/luan">Trang chủ</a></li>
 						<li><a href="#">Sản phẩm</a>
 							<ul class="sub-menu">
 								<li><a href="product_type.html">Sản phẩm 1</a></li>
@@ -98,6 +98,14 @@
 								<li><a href="product_type.html">Sản phẩm 4</a></li>
 							</ul>
 						</li>
+						<li><a href="#">Loai Sản phẩm</a>					
+							<ul class="sub-menu">				
+							@foreach($loai_sp as $loai)			
+								<li><a href="/luan1/{{ $loai->id }}">{{ $loai->name }}</a></li>			
+							@endforeach			
+							</ul>				
+						</li>					
+
 						<li><a href="about.html">Giới thiệu</a></li>
 						<li><a href="contacts.html">Liên hệ</a></li>
 					</ul>
